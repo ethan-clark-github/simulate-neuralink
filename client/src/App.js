@@ -122,7 +122,7 @@ console.log(user, "hey")
         <div>
           <p>Welcome, {user.username}!</p>
           <button onClick={handleLogout}>Logout</button>
-          <YourCapabilitiesContainer userCapabilities={user.functions} user={user} />
+          {/* <YourCapabilitiesContainer userCapabilities={user.functions} user={user} /> */}
         </div>
       ) : (
         <LoginForm onLogin={handleLogin} />
