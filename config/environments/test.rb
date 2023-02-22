@@ -9,8 +9,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   config.cache_classes = false
-  ###########
-  config.action_view.cache_template_loading = false
+  config.action_view.cache_template_loading = true
 
   # Do not eager load code on boot. This avoids loading your whole application
   # just for the purpose of running a single test. If you are using a tool that
@@ -18,15 +17,13 @@ Rails.application.configure do
   config.eager_load = false
 
   # Configure public file server for tests with Cache-Control for performance.
-  ############
-  config.public_file_server.enabled = false
+  config.public_file_server.enabled = true
   config.public_file_server.headers = {
     'Cache-Control' => "public, max-age=#{1.hour.to_i}"
   }
 
   # Show full error reports and disable caching.
-  ###############
-  config.consider_all_requests_local       = false
+  config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
   config.cache_store = :null_store
 
